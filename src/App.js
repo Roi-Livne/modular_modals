@@ -9,12 +9,12 @@ export const ModalContext = React.createContext(null)
 export function App() {
   const [modal, setModal] = useState({ isOpen: false, type: 'login' })
 
-  const openModal = (type) => {
-    setModal({ isOpen: true, type })
+  const setModalParams = ({ isOpen, type }) => {
+    setModal({ isOpen, type })
   }
 
   return (
-    <ModalContext.Provider value={{ modal, openModal }}>
+    <ModalContext.Provider value={{ modal, setModalParams }}>
       <Modal />
       <div className="App">
         <header className="App-header">
@@ -23,10 +23,10 @@ export function App() {
           <p>
             Choose a modal to open
         </p>
-          <button onClick={() => openModal('login')}>Log in</button>
-          <button onClick={() => openModal('signup')}>Sign up</button>
-          <button onClick={() => openModal('buy')}>Buy now</button>
-          <button onClick={() => openModal('credits')}>Credits</button>
+          <button onClick={() => setModalParams({ isOpen: true, type: 'login' })}>Log in</button>
+          <button onClick={() => setModalParams({ isOpen: true, type: 'signup' })}>Sign up</button>
+          <button onClick={() => setModalParams({ isOpen: true, type: 'buy' })}>Buy now</button>
+          <button onClick={() => setModalParams({ isOpen: true, type: 'credits' })}>Credits</button>
         </header>
       </div>
     </ModalContext.Provider>
