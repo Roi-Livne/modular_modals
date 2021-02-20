@@ -22,10 +22,6 @@ function Modal() {
       </div>
     )
   } else return (<></>)
-
-
-
-
 }
 
 export default Modal
