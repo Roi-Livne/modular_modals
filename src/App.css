@@ -36,3 +36,24 @@
     transform: rotate(360deg);
   }
 }
+
+.modal__background {
+    position: fixed;
+    z-index: 2000;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+
+  .modal__content {
+    z-index: 2000;
+    margin: 14rem auto;
+    width: 35rem;
+    padding: 1rem;
+    background-color: #f8f8f8;
+    border-radius: 5px;
+    box-shadow: 0 0 0.3rem 0.3rem rgba(255, 255, 255, 0.4);
+  }
