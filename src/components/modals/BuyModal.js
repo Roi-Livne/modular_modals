@@ -2,7 +2,7 @@ import React from 'react'
 
 function BuyModal() {
   return (
-    <div>
+    <div className="modal__content">
       Buy now
     </div>
   )

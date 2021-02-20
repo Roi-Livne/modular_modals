@@ -2,7 +2,7 @@ import React from 'react'
 
 function CreditsModal() {
   return (
-    <div>
+    <div className="modal__content">
       Credits
     </div>
   )
